@@ -1,0 +1,235 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\projectItem}[2]{
+  \item\small{
+    \textbf{#1}{#2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projectSubheading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\activitySubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Xuhui Lu} & Email : \href{mailto:XuhuiLU0914@163.com}{XuhuiLU0914@163.com}\\
+  Zhejiang University & Mobile : +1-408-324-4784 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Zhejiang University}{Hangzhou, China}
+      {B.E in Software Engineering;  GPA: 3.78/4.0; Third year GPA: 3.84/4.0}{Sept. 2014 -- Present}
+      \resumeItemListStart
+      \resumeItem{Core Courses}
+      	  {Computer Network / Database / Operation System / Data Structure and Algorithm / Computer Organization / Digital Logical Design / Compile Principle / Discretion Mathematics / Software Engineering / Object-oriented Programming }
+      \resumeItem{Second Prize}
+          {Top 10\% in Zhejiang Province University Students Physics Competition.}
+          \resumeItem{Third-class Scholarship}
+          {Top 20\% students in Software Engineering department.}
+      \resumeItemListEnd
+
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Cisco Systems, Inc.}{San Jose, CA, USA}
+      {Software Engineering Intern, Cisco Chief Technology and Architecture Office}{Aug. 2017 - Present}
+      \resumeItemListStart
+        \resumeItem{Meraki Data Analysis}
+          {Implemented and deployed a real-time log analysis system to monitor, analyze and predict Cisco Meraki cloud platform's status based on HSMM with Elastic Stack. }
+        \resumeItem{Huddle API}
+          {Designed and deployed API service with Flask as the backend of Cisco Health Care Huddle system to support online conference for patients and medical teams with Nginx and Gunicorn load balancing.}
+          
+      \resumeItem{Huddle Dashboard}
+          {Implemented a dashboard for Cisco Health Care Huddle system to display patients' basic information and support huddle reservation for patients based by ReactJS and Kibana.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \projectSubheading{Auto-restocking of Fruit Android App}{Jun. 2017 -- Jul. 2017}
+      \resumeItemListStart
+         \projectItem{}
+      {Conducted a research on popular one-click checkout methods like iBeacon, Kungfu and facial recognition.}
+          \projectItem{}
+      {Implemented a module for both buyer and seller end to keep track of fruits stock in home fridge and seller depot by Near Field Communication (NFC).}
+        \projectItem{}
+  {Designed a backstage service to detect the stock and place orders automatically by JobService.}
+      \resumeItemListEnd
+      
+      \projectSubheading{News-Syndication Website}{Mar. 2017 -- May. 2017}
+      \resumeItemListStart
+         \projectItem{}
+      {Designed a distributed spider based on Python Celery with a Redis broker and a MongoDB backend to crawl news data from Netease and Sina. Refactored the download middleware based on ChromeDriver to handle dynamic elements.}
+      \projectItem{}
+    {Implemented a news sites for news syndication, with a Python Flask backend server and a ReactJS frontend. }
+      \resumeItemListEnd
+      
+      \projectSubheading{MiniSQL }{ May. 2016 -- Jun. 2016 }
+      \resumeItemListStart
+         \projectItem{}
+      {Implemented a small-scale database with C++, supporting concurrent SQL operations including Update, Insert, Select, Create, Delete. }
+      \projectItem{}
+    {Implemented the well-modularized parts including Buffer Manager, Record Manager and Index Manager. }
+    \projectItem{}
+    {Achieved over 800 SQL statements per second on a quad-core machine. }
+
+      \resumeItemListEnd
+      
+      \projectSubheading{Tiger language compiler }{ May. 2017 -- Jun. 2017 }
+      \resumeItemListStart
+         \projectItem{}
+      {Implemented a Tiger language compiler including lexical analyzer, syntax parser, abstract syntax tree and intermediate code generator with Bison,  Flex and C++ 11/14. Redesigned Tiger syntax to support object-oriented programming. }
+     \projectItem{}
+    {Generated executable code of 50 test programs including Eight Queen Problem. }
+
+      \resumeItemListEnd
+      
+        \projectSubheading{MIPS Assembler }{ Mar. 2016 -- Apr. 2016 }
+        {}
+      \resumeItemListStart
+         \projectItem{}
+    {Designed an assembler with  C++ and Qt, supporting operations such as monitor registers and memory, compile code, run code and debug code in both graphical interface and command line.}
+     \projectItem{}
+    {Supported more than 50 MIPS instructions and tested by over 50 MIPS programs.}
+
+      \resumeItemListEnd 
+
+  \projectSubheading{No Pig Survives game based on OpenGL }{ Dec. 2016 -- Jan. 2017 }
+      \resumeItemListStart
+         \projectItem{}
+        {Developed a 3D parkour game based on Angry Bird theme with OpenGL and pure C++.}
+      \projectItem{}
+       {Optimized the game performance by implementing AABB tree for real-time collision detection and failure judgement.}
+
+      \resumeItemListEnd
+      
+      \projectSubheading{Beautify Camera for IOS }{ Apr. 2017 -- May. 2017 }
+      \resumeItemListStart
+         \projectItem{}
+        {Developed a face recognition app for IOS  with OpenCV and Objective C. }
+      \projectItem{}
+        {Incorporated augmented reality video and image filter with GPUImage framework.}
+  
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Programming Language}{: C, C++, Java, Php, Python, Javascript, Swift, SQL, Octave}
+    }
+     \item{
+      \textbf{Platform and Tools}{: Tomcat, IOS, Nginx, Linux, Android, OpenGL, ReactJS, Flask, Django, ELK Stack, MySQL, PostgreSQL, MongoDB, Redis}
+      }
+  \resumeSubHeadingListEnd
+
+%-----------EXTRACURRICULAR ACTIVITIES-----------------
+\section{Extracurricular activities}
+  \resumeSubHeadingListStart
+ 
+    \activitySubheading{ National Secondary Basketball Referee }{Jun. 2015 -- present }
+    {Won the Outstanding Referee Prize in 2015 Merit Cup basketball association.}{}
+    \activitySubheading{ Z.J.U Student Law Research Association -- Minister of Quality Development  }{Sept. 2014 -- Jun. 2016 }{Presided over  the 25th and 26th Moot Court in Z.J.U.}{}
+
+
+
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
